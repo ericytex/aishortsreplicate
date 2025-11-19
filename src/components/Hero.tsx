@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Play, Zap, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -22,10 +23,12 @@ export const Hero = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-          <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 glow-effect text-lg px-8">
-            <Play className="w-5 h-5 mr-2" />
-            Start Creating
-          </Button>
+          <Link to="/dashboard">
+            <Button size="lg" className="bg-gradient-to-r from-primary to-accent hover:opacity-90 glow-effect text-lg px-8">
+              <Play className="w-5 h-5 mr-2" />
+              Start Creating
+            </Button>
+          </Link>
           <Button size="lg" variant="outline" className="border-primary/30 hover:bg-primary/10 text-lg px-8">
             <TrendingUp className="w-5 h-5 mr-2" />
             View Demo
